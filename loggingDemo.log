@@ -1,0 +1,5 @@
+2014-04-29 17:48:02,841 - demo - DEBUG - A debug message
+2014-04-29 17:48:02,841 - demo - INFO - An info message
+2014-04-29 17:48:02,841 - demo - WARNING - A warning message
+2014-04-29 17:48:02,841 - demo - ERROR - An error message
+2014-04-29 17:48:02,893 - demo - CRITICAL - A critical message
