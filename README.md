@@ -6,13 +6,20 @@ Matthew Cahn
 mcahn@princeton.edu
 
 
-Using if __name__ == '__main__' so your module can be imported.
+Importing your module with 
 
-Documenting with doc strings so help() works.
+    if __name__ == '__main__' 
+
+
+Documenting with doc strings so you can use 
+
+    help() 
+    
 
 Command line parsing with optparse (if you're using an older version of Python) (Python < 2.7).
 
     pyversion.py
+
 
 
 Command line parsing.
@@ -20,6 +27,7 @@ Command line parsing.
     commandline1.py -- Using sys.argv directly -- BAD
     commandline2.py -- argparse (Python 2.7 or newer) -- define your options with code
     commandline3.py -- docopt (add-on module) -- define your options with documentation
+
 
 
 Interleave two or more lists.
@@ -45,7 +53,9 @@ List, dictionary, and set comprehensions -- a concise way to create these object
 
 The dictionary setdefault method -- set the default value for a key, or return the current value.
 
+
 The doctest module -- test a module according to the doc string.
+
 
 Everything in Python is a reference.
 
@@ -67,10 +77,11 @@ The logging module -- send messages to the screen, files, email, etc.
     loggingDemo.py
     loggingDemo.conf
 
+
 Documentation:
 
-    The Global Module index: docs.python.org
+The Global Module index: docs.python.org
 
-    The Python Cookbook: http://code.activestate.com/recipes/langs/python/
+The Python Cookbook: http://code.activestate.com/recipes/langs/python/
 
-    docopt.org -- For the docopt module.
+docopt.org -- For the docopt module.
