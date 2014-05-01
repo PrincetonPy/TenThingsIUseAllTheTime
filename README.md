@@ -2,7 +2,9 @@ Tips and Tricks
 ===============
 
 5/1/2014
-Matthew Cahn
+
+**Matthew Cahn**
+
 mcahn@princeton.edu
 
 
