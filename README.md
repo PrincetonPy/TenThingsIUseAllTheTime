@@ -9,6 +9,7 @@ mcahn@princeton.edu
 
 
 Goals
+-----
 
 1. Getting the job done
 2. Maintainability
