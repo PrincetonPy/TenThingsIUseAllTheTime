@@ -31,6 +31,6 @@ print(oddSquares)
 
 # and a set with a set comprehension (Python 2.7 or newer)
 
-justSquares = {x**2 for x in range(10) if x % 2}
+oddSquares = {x**2 for x in range(10) if x % 2}
 
-print(justSquares)
+print(oddSquares)

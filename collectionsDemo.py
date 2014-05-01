@@ -2,11 +2,14 @@
 
 '''
 
-Example: 1) The dictionary setdefault method
+Example: The Counter and defaultdict objects in the collections module.
 
-         2) The doctest module.
+         (New in Python 2.7 and 2.5 respectively)
+         
+         Like dictsAndDoctest.py, but use Counter and defaultdict instead of a dictionaries.
 
-         3) Everything is a reference
+         Counter is like a dictionary that assumes a value of 0 for missing items.
+         defaultdict is a dictionary that uses a caller-supplied function to provide missing items.
          
 The doctest module will test to see if the program produces this output:
 
@@ -27,6 +30,9 @@ Length: 15 Count: 1 Words: prefermentation
 Length: 17 Count: 1 Words: circumscriptively
 '''
 
+import collections
+import sys
+
 # From http://listofrandomwords.com
 
 someWords = '''
@@ -35,26 +41,31 @@ Valiant excruciation photometric prefermentation nonlegume galoubet dendriticall
 
 def countWordsByLength(words):
     '''Count the distribution of words by their lengths.'''
-
-    # Make a histogram by word length,
+    
+    # Make a histogram by word length.
+    try:
+        histogram = collections.Counter()
+    except AttributeError:
+        pyVersion = '.'.join(['%d' % num for num in sys.version_info[:3]])
+        print('The Counter object is new in Python 2.7. You are running %s.' % pyVersion)
+        sys.exit(1)
     # and make a list of words for each length.
-    histogram = {}
-    lengthLists = {}
+    try:
+        lengthLists = collections.defaultdict(list)
+    except AttributeError:
+        pyVersion = '.'.join(['%d' % num for num in sys.version_info[:3]])
+        print('defaultdict is new in Python 2.5. You are running %s.' % pyVersion)
+        sys.exit(1)
 
     # For every word:
     for word in words:
         wordLen = len(word)
-        
+
         # Increment the histogram for this length
-        lengthCount = histogram.setdefault(wordLen, 0)
-        lengthCount += 1
-        histogram[wordLen] = lengthCount
-
+        histogram[wordLen] += 1
         # Add the word to the list for this length
-        l = lengthLists.setdefault(wordLen, [])
-        l.append(word)
-        # l is a reference to the list so we're done
-
+        lengthLists[wordLen].append(word)
+        
     allLengths = list(histogram.keys())
     allLengths.sort()
 
@@ -66,7 +77,7 @@ if __name__ == '__main__':
     # Verify that this program does what the __doc__ string says.
     import doctest
     doctest.testmod()
-    
+
     # Split on spaces, create a list.
     wordList = someWords.split()
     
