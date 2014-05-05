@@ -13,30 +13,18 @@ The doctest module will test to see if the program produces this output:
 >>> import dictsAndDoctest
 >>> wordList = someWords.split()
 >>> dictsAndDoctest.countWordsByLength(wordList)
-Length:  4 Count: 1
-Words: trod
-Length:  5 Count: 3
-Words: music, zinky, pekoe
-Length:  6 Count: 2
-Words: kozlov, pertly
-Length:  7 Count: 4
-Words: Valiant, canales, hotspur, brusher
-Length:  8 Count: 5
-Words: galoubet, Besancon, oxidizer, pargeted, pulpitum
-Length:  9 Count: 5
-Words: nonlegume, pretypify, dishallow, Intendant, ramillies
-Length: 10 Count: 3
-Words: earthmover, switchyard, spinaceous
-Length: 11 Count: 2
-Words: photometric, undercurved
-Length: 12 Count: 3
-Words: excruciation, hypoglobulia, nonbelieving
-Length: 13 Count: 3
-Words: dendritically, preenumerated, uncategorised
-Length: 15 Count: 1
-Words: prefermentation
-Length: 17 Count: 1
-Words: circumscriptively
+Length:  4 Count: 1 Words: trod
+Length:  5 Count: 3 Words: music, zinky, pekoe
+Length:  6 Count: 2 Words: kozlov, pertly
+Length:  7 Count: 4 Words: Valiant, canales, hotspur, brusher
+Length:  8 Count: 5 Words: galoubet, Besancon, oxidizer, pargeted, pulpitum
+Length:  9 Count: 5 Words: nonlegume, pretypify, dishallow, Intendant, ramillies
+Length: 10 Count: 3 Words: earthmover, switchyard, spinaceous
+Length: 11 Count: 2 Words: photometric, undercurved
+Length: 12 Count: 3 Words: excruciation, hypoglobulia, nonbelieving
+Length: 13 Count: 3 Words: dendritically, preenumerated, uncategorised
+Length: 15 Count: 1 Words: prefermentation
+Length: 17 Count: 1 Words: circumscriptively
 '''
 
 # From http://listofrandomwords.com
@@ -62,7 +50,7 @@ def countWordsByLength(words):
         lengthCount += 1
         histogram[wordLen] = lengthCount
 
-        # Add to the list for this length
+        # Add the word to the list for this length
         l = lengthLists.setdefault(wordLen, [])
         l.append(word)
         # l is a reference to the list so we're done
@@ -71,8 +59,7 @@ def countWordsByLength(words):
     allLengths.sort()
 
     for length in allLengths:
-        print('Length: %2d Count: %d' % (length, histogram[length]))
-        print('Words: %s' % ', '.join(lengthLists[length]))
+        print('Length: %2d Count: %d Words: %s' % (length, histogram[length], ', '.join(lengthLists[length])))
 
 if __name__ == '__main__':
 

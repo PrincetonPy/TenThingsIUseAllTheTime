@@ -1,7 +1,6 @@
 #!/bin/env python
 
 '''
-
 Check the python version.
 
 Example: Use "if __name__ == '__main__':" above code that should

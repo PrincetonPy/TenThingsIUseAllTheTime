@@ -29,6 +29,8 @@ Command line parsing.
 
 Interleave two or more lists.
 
+The itertools module
+
     zip.py
 
 

@@ -37,5 +37,5 @@ if __name__ == '__main__':
 
     specifiedArgs(*positionalArgs, **keywordArgs)
 
-    myprint('name: %s i: %d x: %f' % ('Matthew', 7, 2.3), 'blah', sep='|')
+    myprint('abc', 7, 2.3, sep='|', end='\r\n')
 

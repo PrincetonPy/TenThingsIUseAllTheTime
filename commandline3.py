@@ -16,9 +16,9 @@ Options:
 
 '''
 
-from docopt import docopt
-
 if __name__ == '__main__':
-    
+
+    from docopt import docopt
+
     arguments = docopt(__doc__)
     print(arguments)

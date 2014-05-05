@@ -3,3 +3,8 @@
 2014-04-29 17:48:02,841 - demo - WARNING - A warning message
 2014-04-29 17:48:02,841 - demo - ERROR - An error message
 2014-04-29 17:48:02,893 - demo - CRITICAL - A critical message
+2014-05-01 11:31:34,288 - demo - DEBUG - A debug message
+2014-05-01 11:31:34,299 - demo - INFO - An info message
+2014-05-01 11:31:34,299 - demo - WARNING - A warning message
+2014-05-01 11:31:34,299 - demo - ERROR - An error message
+2014-05-01 11:31:34,412 - demo - CRITICAL - A critical message
