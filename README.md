@@ -2,24 +2,26 @@ Tips and Tricks
 ===============
 
 5/1/2014
-Matthew Cahn
+
+**Matthew Cahn**
+
 mcahn@princeton.edu
 
 
-Importing your module with 
+Goals
+-----
 
-    if __name__ == '__main__' 
+1. Getting the job done
+2. Maintainability
+3. Style
 
+Using if `__name__ == '__main__'` so your module can be imported.
 
-Documenting with doc strings so you can use 
-
-    help() 
-    
+Documenting with doc strings so help() works.
 
 Command line parsing with optparse (if you're using an older version of Python) (Python < 2.7).
 
     pyversion.py
-
 
 
 Command line parsing.
@@ -27,7 +29,6 @@ Command line parsing.
     commandline1.py -- Using sys.argv directly -- BAD
     commandline2.py -- argparse (Python 2.7 or newer) -- define your options with code
     commandline3.py -- docopt (add-on module) -- define your options with documentation
-
 
 
 Interleave two or more lists.
@@ -53,18 +54,16 @@ List, dictionary, and set comprehensions -- a concise way to create these object
 
 The dictionary setdefault method -- set the default value for a key, or return the current value.
 
-
 The doctest module -- test a module according to the doc string.
-
 
 Everything in Python is a reference.
 
     dictsAndDoctest.py
 
 
-The Counter object in the collections module -- a customized dictionary for counting things.
+The collections module -- Counter, defaultdict
 
-    counter.py -- (Python >= 2.7)
+    collectionsDemo.py -- (Counter: Python >= 2.7, defaultdict: Python >= 2.5)
 
 
 Function argument passing -- positional, keyword, and variable number of arguments.
@@ -77,11 +76,13 @@ The logging module -- send messages to the screen, files, email, etc.
     loggingDemo.py
     loggingDemo.conf
 
-
 Documentation:
 
-The Global Module index: docs.python.org
+    The Global Module index: docs.python.org
 
-The Python Cookbook: http://code.activestate.com/recipes/langs/python/
+    docopt.org -- For the docopt module.
 
-docopt.org -- For the docopt module.
+Also useful:
+
+    The Python Cookbook: http://code.activestate.com/recipes/langs/python/
+
